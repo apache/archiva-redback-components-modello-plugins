@@ -29,15 +29,18 @@
   <artifactId>modello-plugin-redback-registry</artifactId>
   <name>Redback Registry Reader/Writer</name>
 
-  <url>http://archiva.apache.org/redback/components/modello-plugins/${project.artifactId}</url>
+  <url>${webUrl}/modello-plugins/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/modello-plugins/${project.artifactId}</url>
+      <url>${siteUrl}/modello-plugins/${project.artifactId}</url>
     </site>
   </distributionManagement>
 
+  <scm>
+    <url>${scmBrowseUrl};f=${project.artifactId}</url>
+  </scm>
 
   <dependencies>
     <dependency>

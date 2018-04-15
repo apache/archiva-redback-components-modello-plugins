@@ -34,26 +34,27 @@
   <packaging>pom</packaging>
   <name>Modello Plugins</name>
 
-  <url>http://archiva.apache.org/redback/components/${project.artifactId}</url>
-
-  <description>Modello extensions used by Archiva and Continuum.</description>
-
   <properties>
+    <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-modello-plugins.git</scmBrowseUrl>
     <modelloVersion>1.7</modelloVersion>
   </properties>
+  <scm>
+    <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-modello-plugins.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/archiva-redback-components-modello-plugins.git</developerConnection>
+    <url>${scmBrowseUrl}</url>
+  </scm>
+
+
+  <url>${webUrl}/${project.artifactId}</url>
+
+  <description>Modello extensions used by Archiva and Continuum.</description>
 
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/asf/archiva/site-content/redback/components/${project.artifactId}</url>
+      <url>${siteUrl}/${project.artifactId}</url>
     </site>
   </distributionManagement>
-
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/modello-plugins</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/archiva/redback/redback-components/trunk/modello-plugins</developerConnection>
-    <url>http://svn.apache.org/viewvc/archiva/redback/redback-components/trunk/modello-plugins</url>
-  </scm>
 
   <modules>
     <module>modello-db-keywords</module>
@@ -94,5 +95,24 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <reporting>
+    <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <reportSets>
+            <reportSet>
+              <id>aggregate</id>
+              <inherited>false</inherited>
+              <reports>
+                <report>aggregate</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+    </plugins>
+  </reporting>
+
 
 </project>
