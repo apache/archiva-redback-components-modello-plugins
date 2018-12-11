@@ -28,15 +28,10 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>modello-plugin-redback-registry</artifactId>
   <name>Redback Registry Reader/Writer</name>
-
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
   <url>${webUrl}/modello-plugins/${project.artifactId}</url>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/modello-plugins/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>

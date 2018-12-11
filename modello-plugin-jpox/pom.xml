@@ -28,14 +28,11 @@
   <name>Modello JPox Plugin</name>
   <packaging>jar</packaging>
 
-  <url>${webUrl}/modello-plugins/${project.artifactId}</url>
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
 
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/modello-plugins/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
+  <url>${webUrl}/modello-plugins/${project.artifactId}</url>
 
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>

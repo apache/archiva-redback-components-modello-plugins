@@ -36,6 +36,7 @@
   <properties>
     <scmBrowseUrl>https://gitbox.apache.org/repos/asf?a=tree;p=archiva-redback-components-modello-plugins.git</scmBrowseUrl>
     <modelloVersion>1.7</modelloVersion>
+    <site.staging.base>${project.basedir}/../site</site.staging.base>
   </properties>
   <scm>
     <connection>scm:git:http://gitbox.apache.org/repos/asf/archiva-redback-components-modello-plugins.git</connection>
@@ -47,13 +48,6 @@
   <url>${webUrl}/${project.artifactId}</url>
 
   <description>Modello extensions used by Archiva and Continuum.</description>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
 
   <modules>
     <module>modello-db-keywords</module>

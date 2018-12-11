@@ -28,16 +28,15 @@
   <artifactId>jpox-modello-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
 
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
+
   <name>Jpox Modello Maven Plugin</name>
 
   <url>${webUrl}/modello-plugins/${project.artifactId}</url>
 
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/modello-plugins/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
+
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>
   </scm>

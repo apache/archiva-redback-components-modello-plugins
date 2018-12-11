@@ -27,13 +27,9 @@
   <artifactId>modello-plugin-store</artifactId>
   <name>Modello Store Plugin</name>
   <packaging>jar</packaging>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${siteUrl}/modello-plugins/${project.artifactId}</url>
-    </site>
-  </distributionManagement>
+  <properties>
+    <site.staging.base>${project.parent.basedir}/../site</site.staging.base>
+  </properties>
 
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>
