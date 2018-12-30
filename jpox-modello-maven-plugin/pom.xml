@@ -36,11 +36,9 @@
 
   <url>${webUrl}/modello-plugins/${project.artifactId}</url>
 
-
   <scm>
     <url>${scmBrowseUrl};f=${project.artifactId}</url>
   </scm>
-
 
   <dependencies>
     <dependency>
@@ -112,7 +110,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-invoker-plugin</artifactId>
-            <version>1.8</version>
+            <version>3.1.0</version>
             <configuration>
               <debug>true</debug>
               <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>

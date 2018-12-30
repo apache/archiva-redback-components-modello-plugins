@@ -17,4 +17,4 @@
  * under the License.
  */
 
-asfStandardBuild cmdline:"clean deploy"
+asfStandardBuild((env.BRANCH_NAME == 'master'?"clean deploy -Prun-its":"clean install -Prun-its"))
